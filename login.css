@@ -4,10 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+/* background login page */
 .bg-login {
     background-image: url(image/login.png);
     background-size: cover;
-    /* height: 100vh; */
 
     /* set logo to center of display */
     display: flex;
@@ -15,7 +15,7 @@ body {
     align-items: center;
 }
 
-
+/* layout form login */
 .form-login {
     height: 100vh;
 
@@ -50,10 +50,20 @@ body {
     color: #8692A6;
 }
 
+/* lenght of login form */
 .form-login .form-width {
     width: 350px;
 }
 
+/* lenght of login form in mobile */
+
+@media (max-width: 576px) {
+    .form-login .form-width{
+        width: 230px;
+    }
+}
+
+/* forgot text styling */
 .form-login .forgot {
     font-style: normal;
     font-weight: 500;
@@ -66,6 +76,8 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/* text signup styling */
 
 .form-login .dont-have-account {
     font-style: normal;
@@ -80,6 +92,7 @@ body {
     color: #EFC81A;
 }
 
+/* coloring text in login button */
 .form-login .d-grid .login{
     color: white;
 }

@@ -4,7 +4,8 @@ body {
     overflow-x: hidden;
 }
 
-.bg-login {
+/* background signup */
+.bg-signup {
     background-image: url(image/login.png);
     background-size: cover;
 
@@ -14,8 +15,8 @@ body {
     align-items: center;
 }
 
+/* centering form signup */
 .form-signup {
-    /* height: 100vh; */
 
     /* set content to center of display */
     display: flex;
@@ -48,6 +49,7 @@ body {
     color: #8692A6;
 }
 
+/* lenght of signup form */
 .form-signup .form-width {
     width: 430px;
     height: 64px;
@@ -55,14 +57,29 @@ body {
     margin-bottom: 35px;
 }
 
+/* lenght of signup form in mobile */
+
+@media (max-width: 576px) {
+    .form-signup .form-width{
+        width: 230px;
+    }
+
+    .form-signup .already-have-account{
+        font-size: 12px;
+    }
+}
+
+/* checklist term */
 .form-signup .form-check{
     margin-top: 35px;
 }
 
+/* coloring text in signup button */
 .form-signup .d-grid .regis{
     color: white;
 }
 
+/* login link styling */
 .form-signup .login{
     text-decoration: none;
     color: #EFC81A;

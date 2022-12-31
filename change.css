@@ -21,6 +21,9 @@ body {
     height: 100px;
 }
 
+.content .btn{
+    width: 250px;
+}
 /* start footer css */
 footer {
     background-color: #efc81a;

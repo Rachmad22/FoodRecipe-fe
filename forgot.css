@@ -4,7 +4,8 @@ body {
     overflow-x: hidden;
 }
 
-.bg-login {
+/* background forgot */
+.bg-forgot {
     background-image: url(image/login.png);
     background-size: cover;
     height: 100vh;
@@ -15,6 +16,7 @@ body {
     align-items: center;
 }
 
+/* form forgot */
 .form-forgot {
     height: 100vh;
 
@@ -56,10 +58,12 @@ body {
     margin-bottom: 35px;
 }
 
+/* setup forgot button */
 .form-forgot .d-grid{
     margin-top: 30px;
 }
 
+/* coloring text in forgot button */
 .form-forgot .d-grid .forgot{
     color: white;
 }
