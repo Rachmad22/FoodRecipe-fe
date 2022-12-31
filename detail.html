@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loream Sandwich</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!--   Style CSS   -->
+  <link rel="stylesheet" href="detail.css">
+</head>
+
+<body id="body">
+
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active me-5" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link me-5" href="add.html">Add Recipe</a>
+          <a class="nav-link me-5" href="profile.html">Profile</a>
+        </div>
+        <div class="ms-auto">
+          <a class="btn btn-light" href="login.html">Log In</a>
+          <a class="btn btn-warning" href="signup.html">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+
+  <!-- Content -->
+  <section>
+    <!-- setting margin right & left the page -->
+    <div class="container mx-auto" style="width: 950px;">
+      <!-- Title and Image -->
+      <div class="row">
+        <div class="text-center mt-lg-5">
+          <h1>Loream Sandwich</h1>
+          <img src="./image/detail/detail1.jpg" width="600px" height="400px">
+        </div>
+      </div>
+      <!-- List ingredients -->
+      <div class="mt-5">
+        <h2>Ingredients</h2>
+        <ul class="list-group">
+          <li>2 eggs</li>
+          <li>2 tbsp mayonnaise</li>
+          <li>3 slices bread</li>
+          <li>a little butter</li>
+          <li>⅓ carton of cress</li>
+          <li>2-3 slices of tomato or a lettuce leaf and a slice of ham or cheese</li>
+          <li>crisps, to serve</li>
+        </ul>
+      </div>
+      <!-- video step -->
+      <div class="mt-5">
+        <h2>Video Step</h2>
+        <!-- Button modal step 1 -->
+        <div class="row">
+
+          <button type="button" class="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video1">
+            <img src="./image/detail/play.png" alt="">
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="video1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Video 1</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/hj5Xv2L2X4M" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button modal step 2 -->
+        <div class="row">
+
+          <button type="button" class="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video2">
+            <img src="./image/detail/play.png" alt="">
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="video2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Video 2</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/venrE8gdz30" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button modal step 3 -->
+        <div class="row">
+
+          <button type="button" class="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video3">
+            <img src="./image/detail/play.png" alt="">
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="video3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Video 3</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/WpqUOW19aJQ" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button modal step 4 -->
+        <div class="row">
+          <button type="button" class="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video4">
+            <img src="./image/detail/play.png" alt="">
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="video4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Video 4</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/uPCi5Rs7EuA" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- form comments -->
+      <div class="mt-5 text-center">
+        <label for="exampleFormControlTextarea1" class="form-label"></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6">Comments</textarea>
+        <button class="btn btn-lg btn-warning mt-3 btn-send">
+          <p class="text-center">Send</p>
+        </button>
+      </div>
+      <!-- Comments coloumn -->
+      <div>
+        <h2>Comments</h2>
+        <div class="row align-items-center">
+          <div class="col-1 ms-5">
+            <img src="./image/detail/user.jpg" width="45px" height="45px" class="rounded-circle">
+          </div>
+          <div class="col-8 mt-5">
+            <h5>Rachmad</h5>
+            <p>Nice recipe, delicious and simple, thankyou</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <div>
+      <h2>Eat, Cook, Repeat</h2>
+      <p>Share your best recipe by uploading here !</p>
+
+      <div class="footer-link">
+        <p>Copyright 2022 by RNH. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // detect if has scroll event on screen
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 100) {
+        document.querySelector(".navbar").classList.add("navbar-background");
+      } else {
+        document
+          .querySelector(".navbar")
+          .classList.remove("navbar-background");
+      }
+    });
+  </script>
+</body>
+
+</html>

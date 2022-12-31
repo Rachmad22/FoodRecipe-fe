@@ -1,0 +1,86 @@
+html,
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.bg-login {
+    background-image: url(image/login.png);
+    background-size: cover;
+    /* height: 100vh; */
+
+    /* set logo to center of display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-login {
+    height: 100vh;
+
+    /* set content to center of display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+
+    display: block;
+    text-align: center;
+
+    color: #EFC81A;
+}
+
+.form-login p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+
+    display: block;
+    text-align: center;
+
+    color: #8692A6;
+}
+
+.form-login .form-width {
+    width: 350px;
+}
+
+.form-login .forgot {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-login .dont-have-account {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    color: #999999;
+}
+
+.form-login .signup{
+    text-decoration: none;
+    color: #EFC81A;
+}
+
+.form-login .d-grid .login{
+    color: white;
+}
+

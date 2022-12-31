@@ -1,0 +1,124 @@
+body {
+    background-color: #fff5ec;
+}
+
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-background {
+    background-color: #efc81a;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+    color: #fff5ec !important;
+}
+
+/* thumbnail's size */
+#play .size {
+    width: 100%;
+    height: 130px;
+}
+/* Display title */
+#play #title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+
+    color: #000000;
+}
+/* thumbnail's title */
+#play a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+
+    color: #000000;
+}
+/* thumbnail date upload */
+#play p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 13px;
+    /* identical to box height */
+
+    letter-spacing: -0.3px;
+
+    color: #AAAAAA;
+}
+/* display date upload */
+#play #main-date {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 31px;
+    letter-spacing: -0.3px;
+
+    color: #AAAAAA;
+}
+
+/* start footer css */
+footer {
+    background-color: #efc81a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    text-align: center;
+    position: relative;
+}
+
+footer h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    margin-bottom: 30px;
+
+    color: #2e266f;
+}
+
+footer p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    color: #707070;
+}
+
+footer .footer-link {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+footer .footer-link p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    /* or 150% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #707070;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+/* end of footer css */
