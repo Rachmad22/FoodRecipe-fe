@@ -26,6 +26,10 @@ body {
     }
 }
 
+#header h1, h2{
+    font-family: 'Poppins', sans-serif;
+}
+
 /* content mobile version */
 @media screen and (max-width: 600px) {
     #header h1{
@@ -126,17 +130,18 @@ footer .footer-link p {
 
 /* footer mobile version */
 @media screen and (max-width: 600px) {
-    footer h2{
+    footer h2 {
         font-size: 37px;
     }
 
-    footer p{
+    footer p {
         font-size: 14px;
     }
 
-    footer .footer-link p{
+    footer .footer-link p {
         font-size: 9px;
     }
 }
+
 
 /* end of footer css */

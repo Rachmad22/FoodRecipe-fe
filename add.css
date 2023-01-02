@@ -72,4 +72,19 @@ footer .footer-link p {
     margin-bottom: 30px;
 }
 
+/* footer mobile version */
+@media screen and (max-width: 600px) {
+    footer h2{
+        font-size: 37px;
+    }
+
+    footer p{
+        font-size: 14px;
+    }
+
+    footer .footer-link p{
+        font-size: 9px;
+    }
+}
+
 /* end of footer css */

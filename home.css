@@ -87,7 +87,7 @@ body {
         height: 80vh;
     }
 
-    #header h1{
+    #header h1 {
         font-size: 35px;
         margin-top: 30px;
     }
@@ -104,7 +104,9 @@ body {
 
     #header .background-grid .main-background {
         width: 80%;
-        margin-left: 33px;
+        display: flex;
+        justify-content: center;
+        margin-left: 3vw;
     }
 
     #header .background-grid .background-1 {
@@ -298,16 +300,17 @@ footer .footer-link p {
 
 /* footer mobile version */
 @media screen and (max-width: 600px) {
-    footer h2{
+    footer h2 {
         font-size: 37px;
     }
 
-    footer p{
+    footer p {
         font-size: 14px;
     }
 
-    footer .footer-link p{
+    footer .footer-link p {
         font-size: 9px;
     }
 }
+
 /* end of footer css */
