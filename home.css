@@ -15,7 +15,7 @@ body {
     color: #fff5ec !important;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
     .navbar {
         background-color: #efc81a;
         box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
@@ -39,7 +39,6 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 52px;
-    /* or 125% */
 
     display: flex;
     align-items: center;
@@ -82,10 +81,15 @@ body {
     right: 0;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
     #header {
         margin-top: 100px;
         height: 80vh;
+    }
+
+    #header h1{
+        font-size: 50px;
+        margin-top: 30px;
     }
 
     #header,
@@ -94,17 +98,13 @@ body {
         align-items: unset;
     }
 
-    /* #header .row {
-      flex-direction: column-reverse !important;
-    } */
-
     #header .background-grid {
         height: 50vh;
     }
 
     #header .background-grid .main-background {
-        width: 100%;
-        margin-left: -30px;
+        width: 70%;
+        margin-left: 50px;
     }
 
     #header .background-grid .background-1 {
@@ -165,7 +165,7 @@ body {
 }
 
 /* mobile version */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
     #new-recipe .main-image {
         height: 300px;
     }
@@ -227,7 +227,7 @@ body {
 }
 
 /* mobile version */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
     #popular-recipe .clickable-image {
         height: 250px;
         object-fit: cover;

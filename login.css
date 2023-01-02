@@ -57,9 +57,10 @@ body {
 
 /* lenght of login form in mobile */
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
+
     .form-login .form-width{
-        width: 230px;
+        width: 250px;
     }
 }
 

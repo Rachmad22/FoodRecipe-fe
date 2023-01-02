@@ -8,6 +8,7 @@ body {
 .bg-signup {
     background-image: url(image/login.png);
     background-size: cover;
+    
 
     /* set logo to center of display */
     display: flex;
@@ -59,9 +60,9 @@ body {
 
 /* lenght of signup form in mobile */
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     .form-signup .form-width{
-        width: 230px;
+        width: 250px;
     }
 
     .form-signup .already-have-account{

@@ -2,7 +2,8 @@ body {
     background-color: #fff5ec;
 }
 
-.navbar {
+/* navbar top */
+.top {
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -22,9 +23,20 @@ body {
     height: 100px;
 }
 
-/* tablet version */
-@media (max-width: 991.98px){
-    
+/* mobile version */
+@media (max-width: 600px){
+    .top {
+        background-color: #efc81a;
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+        -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+        -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+        color: #fff5ec !important;
+    }
+
+    .content .thumbnail{
+        width: 50%;
+        height: 250px;
+    }
 }
 
 /* start footer css */

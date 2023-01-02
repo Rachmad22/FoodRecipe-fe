@@ -15,6 +15,37 @@ body {
     color: #fff5ec !important;
 }
 
+/* navbar mobile version */
+@media screen and (max-width: 600px) {
+    .navbar {
+        background-color: #efc81a;
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+        -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+        -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+        color: #fff5ec !important;
+    }
+}
+
+/* content mobile version */
+@media screen and (max-width: 600px) {
+    #header h1{
+        margin-top: 100px;
+    }
+
+    #header .photo{
+        width: 70%;
+        height: 300px;
+    }
+
+    #header h2, .list-group, .button{
+        margin-left: 30px;
+    }
+
+    #header .btn-send{
+        margin-bottom: 30px;
+    }
+}
+
 /* start button step css*/
 .btn-step {
     width: 200px;
