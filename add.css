@@ -15,6 +15,20 @@ body {
     color: #fff5ec !important;
 }
 
+@media screen and (max-width: 600px) {
+    .navbar {
+        background-color: #efc81a;
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+        -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+        -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
+        color: #fff5ec !important;
+    }
+
+    #header{
+        margin-top: 20%;
+    }
+}
+
 
 /* start footer css */
 footer {
