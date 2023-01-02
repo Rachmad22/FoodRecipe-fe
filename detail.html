@@ -14,6 +14,12 @@
   <!--   Style CSS   -->
   <link rel="stylesheet" href="detail.css">
 
+  <!-- link google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap"
+    rel="stylesheet">
+
   <!-- head's icon -->
   <link rel="icon" href="./image/logo.png" type="image/x-icon">
 </head>
@@ -45,11 +51,11 @@
   <!-- Content -->
   <section id="header">
     <!-- setting margin right & left the page -->
-    <div class="container mx-auto" style="width: 950px;">
+    <div class="container mx-lg-auto">
       <!-- Title and Image -->
       <div class="row">
-        <div class="text-center mt-lg-5">
-          <h1>Loream Sandwich</h1>
+        <div class="text-center mt-lg-5 mt-xs-5">
+          <h1 class="mb-lg-4 mb-xs-5">Loream Sandwich</h1>
           <img src="./image/detail/detail1.jpg" class="photo" width="600px" height="400px">
         </div>
       </div>
@@ -62,7 +68,7 @@
           <li>3 slices bread</li>
           <li>a little butter</li>
           <li>⅓ carton of cress</li>
-          <li>2-3 slices of tomato or a lettuce leaf and a slice of ham or cheese</li>
+          <li>2-3 slices of tomato or a lettuce leaf <br> and a slice of ham or cheese</li>
           <li>crisps, to serve</li>
         </ul>
       </div>
@@ -178,22 +184,24 @@
 
       </div>
       <!-- form comments -->
-      <div class="mt-5 text-center">
-        <label for="exampleFormControlTextarea1" class="form-label"></label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6">Comments</textarea>
-        <button class="btn btn-lg btn-warning mt-3 btn-send">
-          <p class="text-center">Send</p>
-        </button>
+      <div class="container mx-2">
+        <div class="mt-lg-5 text-center">
+          <label for="comment-form" class="form-label"></label>
+          <textarea class="form-control" id="comment-form" rows="6">Comments</textarea>
+          <button class="btn btn-lg btn-warning mt-3 btn-send">
+            <p class="text-center">Send</p>
+          </button>
+        </div>
       </div>
       <!-- Comments coloumn -->
       <div>
         <h2>Comments</h2>
-        <div class="row align-items-center">
+        <div class="row">
           <div class="col-1 ms-lg-5">
             <img src="./image/detail/user.jpg" width="45px" height="45px" class="rounded-circle">
           </div>
-          <div class="col-8 mt-lg-5 mt-sm-4 ms-3">
-            <h5>Rachmad</h5>
+          <div class="col-8 mb-xs-4 ms-4">
+            <h5>RachmadNH</h5>
             <p>Nice recipe, delicious and simple, thankyou</p>
           </div>
         </div>

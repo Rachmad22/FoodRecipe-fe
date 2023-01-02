@@ -88,7 +88,7 @@ body {
     }
 
     #header h1{
-        font-size: 50px;
+        font-size: 35px;
         margin-top: 30px;
     }
 
@@ -103,8 +103,8 @@ body {
     }
 
     #header .background-grid .main-background {
-        width: 70%;
-        margin-left: 50px;
+        width: 80%;
+        margin-left: 33px;
     }
 
     #header .background-grid .background-1 {
@@ -285,7 +285,6 @@ footer .footer-link p {
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
-    /* or 150% */
 
     display: flex;
     align-items: center;
@@ -297,4 +296,18 @@ footer .footer-link p {
     margin-bottom: 30px;
 }
 
+/* footer mobile version */
+@media screen and (max-width: 600px) {
+    footer h2{
+        font-size: 37px;
+    }
+
+    footer p{
+        font-size: 14px;
+    }
+
+    footer .footer-link p{
+        font-size: 9px;
+    }
+}
 /* end of footer css */
