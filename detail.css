@@ -39,7 +39,7 @@ body {
     #header .photo{
         width: 90%;
         height: 300px;
-        background-size: cover;
+        object-fit: cover;
     }
 
 

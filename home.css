@@ -239,6 +239,10 @@ body {
     #popular-recipe .image-title {
         margin: 10px;
     }
+
+    #popular-recipe .img-recipe{
+        object-fit:cover
+    }
 }
 
 /* end of popular-recipe css */
