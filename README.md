@@ -10,7 +10,7 @@ You can demo app using this url : https://my-foodrecipe.netlify.app/
 + Bootstrap5
 + netlify
 
-# Setup
+# Install
 Clone the project in your local :
 ```
 git clone https://github.com/Rachmad22/FoodRecipe-fe.git
