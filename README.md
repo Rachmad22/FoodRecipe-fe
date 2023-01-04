@@ -16,7 +16,5 @@ Clone the project in your local :
 git clone https://github.com/Rachmad22/FoodRecipe-fe.git
 ```
 
-# Setup
-
 # Done
 Now you can run the app, Thanks!
