@@ -45,33 +45,37 @@
         <div class="container">
             <div class="row mt-5 justify-content-center">
                 <div class="col-8">
-                    <div class="mb-3">
-                        <!-- form image -->
-                        <label for="formFile" class="form-label"></label>
-                        <input class="form-control" type="file" id="formFile">
-
-                        <!-- form title -->
-                        <input class="form-control form-control-lg mt-3" type="text" placeholder="Title"
-                            aria-label=".form-control-lg example">
-
-                        <!-- form ingredients -->
-                        <label for="Ingredients" class="form-label mt-3"></label>
-                        <textarea class="form-control" id="Ingredients" rows="5" placeholder="Ingredients"></textarea>
-
-                        <!-- form video -->
-                        <input class="form-control form-control-lg mt-3" type="text" placeholder="Video"
-                            aria-label=".form-control-lg example">
-
-                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <!-- form image -->
+                            <label for="formFile" class="form-label"></label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <div>
+                            <!-- form title -->
+                            <input class="form-control form-control-lg mt-3" type="text" placeholder="Title"
+                                aria-label=".form-control-lg example">
+                        </div>
+                        <div>
+                            <!-- form ingredients -->
+                            <label for="Ingredients" class="form-label mt-3"></label>
+                            <textarea class="form-control" id="Ingredients" rows="5"
+                                placeholder="Ingredients"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <!-- form video -->
+                            <input class="form-control form-control-lg mt-3" type="text" placeholder="Video"
+                                aria-label=".form-control-lg example">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="d-grid col-4 mx-auto">
+                                <button type="submit" class="btn btn-warning btn-lg post">Post</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <!-- button post -->
-            <div class="row mt-4 mb-5">
-                <div class="d-grid col-4 mx-auto">
-                    <button type="button" class="btn btn-warning btn-lg">Post</button>
-
-                </div>
-            </div>
+        </div>
         </div>
     </section>
 
