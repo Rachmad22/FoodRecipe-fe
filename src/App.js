@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Detail from "./pages/Detail";
+import Add from "./pages/Add";
+import Profile from "./pages/Profile";
 
 // functional component
 function App() {
@@ -22,6 +24,14 @@ function App() {
     {
       path: "detail",
       element: <Detail />
+    },
+    {
+      path: "add",
+      element: <Add />
+    },
+    {
+      path: "profile",
+      element: <Profile />
     }
   ]);
 

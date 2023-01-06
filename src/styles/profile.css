@@ -2,7 +2,8 @@ body {
     background-color: #fff5ec;
 }
 
-.navbar {
+/* navbar top */
+.top {
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -15,61 +16,30 @@ body {
     color: #fff5ec !important;
 }
 
-/* navbar mobile version */
-@media screen and (max-width: 600px) {
-    .navbar {
+/* avatar styling */
+.content .avatar{
+    margin-top: 200px;
+    width: 100px;
+    height: 100px;
+}
+
+/* mobile version */
+@media (max-width: 600px){
+    /* top navbar */
+    .top {
         background-color: #efc81a;
         box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
         -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
         -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.24);
         color: #fff5ec !important;
     }
-}
 
-#header h1, h2{
-    font-family: 'Poppins', sans-serif;
-}
-
-/* content mobile version */
-@media screen and (max-width: 600px) {
-    #header h1{
-        margin-top: 100px;
-    }
-
-    #header .photo{
-        width: 90%;
-        height: 300px;
+    /* images thumbnail */
+    .content .thumbnail{
+        width: 100%;
+        height: 170px;
         object-fit: cover;
     }
-
-
-    #header h2, .list-group, .button{
-        margin-left: 30px;
-    }
-
-    #header .btn-send{
-        margin-bottom: 30px;
-    }
-
-}
-
-/* start button step css*/
-.btn-step {
-    width: 200px;
-    height: 60px;
-    margin-top: 15px;
-}
-
-.btn-send{
-    width: 200px;
-    height: 40px;
-    margin-top: 15px;
-}
-
-.btn-send p{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
 }
 
 /* start footer css */
@@ -116,6 +86,7 @@ footer .footer-link p {
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
+    /* or 150% */
 
     display: flex;
     align-items: center;
@@ -129,18 +100,16 @@ footer .footer-link p {
 
 /* footer mobile version */
 @media screen and (max-width: 600px) {
-    footer h2 {
+    footer h2{
         font-size: 37px;
     }
 
-    footer p {
+    footer p{
         font-size: 14px;
     }
 
-    footer .footer-link p {
+    footer .footer-link p{
         font-size: 9px;
     }
 }
-
-
 /* end of footer css */

@@ -37,7 +37,7 @@ function Detail() {
             </div>
             <div className="ms-auto">
               <Link to="login">
-                <button type="button" className="btn btn-light">Log In</button>
+                <button type="button" className="btn btn-light me-2">Log In</button>
               </Link>
               <Link to="signup">
                 <button type="button" className="btn btn-warning">Sign Up</button>
@@ -51,7 +51,7 @@ function Detail() {
       {/* <!-- Content --> */}
       <section id="header">
         {/* <!-- setting margin right & left the page --> */}
-        <div className="container mx-lg-auto">
+        <div className="container">
           {/* <!-- Title and Image --> */}
           <div className="row">
             <div className="text-center mt-lg-5 mt-xs-5">
