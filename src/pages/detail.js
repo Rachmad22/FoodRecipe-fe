@@ -26,18 +26,17 @@ function Detail() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <Link to="/">
-                <a className="nav-link active me-5" aria-current="page">Home</a>
+              <Link className="nav-link active me-5" to="/">Home
               </Link>
-              <Link to="/add">
-                <a className="nav-link me-5">Add Recipe</a>
+              <Link className="nav-link me-5" to="add">
+              Add Recipe
               </Link>
-              <Link to="/profile">
-                <a className="nav-link me-5">Profile</a>
+              <Link className="nav-link me-5" to="profile">
+              Profile
               </Link>
             </div>
             <div className="ms-auto">
-              <Link to="/login">
+              <Link to="login">
                 <button type="button" className="btn btn-light">Log In</button>
               </Link>
               <Link to="signup">
@@ -57,7 +56,7 @@ function Detail() {
           <div className="row">
             <div className="text-center mt-lg-5 mt-xs-5">
               <h1 className="mb-lg-4 mb-xs-5">Loream Sandwich</h1>
-              <img src="./image/detail/detail1.jpg" className="photo" width="600px" height="400px" />
+              <img src="./image/detail/detail1.jpg" alt="..." className="photo" width="600px" height="400px" />
             </div>
           </div>
           {/* <!-- List ingredients --> */}
@@ -83,7 +82,7 @@ function Detail() {
             <div className="row">
 
               <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video1">
-                <img src="./image/detail/play.png" alt="" />
+                <img src="./image/detail/play.png" alt="icon" />
               </button>
 
               {/* <!-- Modal --> */}
@@ -110,7 +109,7 @@ function Detail() {
             <div className="row">
 
               <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video2">
-                <img src="./image/detail/play.png" alt="" />
+                <img src="./image/detail/play.png" alt="icon" />
               </button>
 
               {/* <!-- Modal --> */}
@@ -137,7 +136,7 @@ function Detail() {
             <div className="row">
 
               <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video3">
-                <img src="./image/detail/play.png" alt="" />
+                <img src="./image/detail/play.png" alt="icon" />
               </button>
 
               {/* <!-- Modal --> */}
@@ -163,7 +162,7 @@ function Detail() {
             {/* <!-- Button modal step 4 --> */}
             <div className="row">
               <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video4">
-                <img src="./image/detail/play.png" alt="" />
+                <img src="./image/detail/play.png" alt="icon" />
               </button>
 
               {/* <!-- Modal --> */}
@@ -202,7 +201,7 @@ function Detail() {
             <h2>Comments</h2>
             <div className="row">
               <div className="col-1 ms-lg-5">
-                <img src="./image/detail/user.jpg" width="45px" height="45px" className="rounded-circle" />
+                <img src="./image/detail/user.jpg" alt="..." width="45px" height="45px" className="rounded-circle" />
               </div>
               <div className="col-8 mb-xs-4 ms-4">
                 <h5>RachmadNH</h5>
