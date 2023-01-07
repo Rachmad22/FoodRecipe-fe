@@ -30,6 +30,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+#header .photo{
+    object-fit: cover;
+    border-radius: 1em;
+}
+
 /* content mobile version */
 @media screen and (max-width: 600px) {
     #header h1{
@@ -37,7 +42,7 @@ body {
     }
 
     #header .photo{
-        width: 90%;
+        width: 100%;
         height: 300px;
         object-fit: cover;
     }
