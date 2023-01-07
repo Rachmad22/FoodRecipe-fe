@@ -28,18 +28,18 @@ function Detail() {
             <div className="navbar-nav">
               <Link className="nav-link active me-5" to="/">Home
               </Link>
-              <Link className="nav-link me-5" to="add">
-              Add Recipe
+              <Link className="nav-link me-5" to="/add">
+                Add Recipe
               </Link>
-              <Link className="nav-link me-5" to="profile">
-              Profile
+              <Link className="nav-link me-5" to="/profile">
+                Profile
               </Link>
             </div>
             <div className="ms-auto">
-              <Link to="login">
+              <Link to="/login">
                 <button type="button" className="btn btn-light me-2">Log In</button>
               </Link>
-              <Link to="signup">
+              <Link to="/signup">
                 <button type="button" className="btn btn-warning">Sign Up</button>
               </Link>
             </div>
@@ -54,9 +54,9 @@ function Detail() {
         <div className="container">
           {/* <!-- Title and Image --> */}
           <div className="row">
-            <div className="text-center mt-lg-5 mt-xs-5">
-              <h1 className="mb-lg-4 mb-xs-5">Loream Sandwich</h1>
-              <img src="./image/detail/detail1.jpg" alt="..." className="photo" width="600px" height="400px" />
+            <div className="mx-auto col-lg-6">
+              <h1 className="text-center mb-lg-4 mb-xs-5">Loream Sandwich</h1>
+              <img src="./image/detail/detail1.jpg" className="photo" width="600px" height="400px" />
             </div>
           </div>
           {/* <!-- List ingredients --> */}
@@ -75,145 +75,152 @@ function Detail() {
               </ul>
             </div>
           </div>
-          {/* <!-- video step --> */}
-          <div className="mt-5 button">
-            <h2>Video Step</h2>
-            {/* <!-- Button modal step 1 --> */}
-            <div className="row">
+        </div>
+      </section>
+      {/* <!-- video step --> */}
+      <section id="video">
+        <div className="container">
+          <div className="row mt-lg-5 button">
+            <div classNameName="col-lg-4">
+              <h2>Video Step</h2>
+              {/* <!-- Button modal step 1 --> */}
+              <div className="row">
 
-              <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video1">
-                <img src="./image/detail/play.png" alt="icon" />
-              </button>
+                <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video1">
+                  <img src="./image/detail/play.png" alt="" />
+                </button>
 
-              {/* <!-- Modal --> */}
-              <div className="modal fade" id="video1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header align-items-baseline">
-                      <h1 className="modal-title fs-5" id="staticBackdropLabel">Video 1</h1>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
-                      <div className="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/hj5Xv2L2X4M" title="YouTube video player" frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen></iframe>
+                {/* <!-- Modal --> */}
+                <div className="modal fade" id="video1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header align-items-baseline">
+                        <h1 className="modal-title fs-5" id="staticBackdropLabel">Video 1</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div className="modal-body">
+                        <div className="ratio ratio-16x9">
+                          <iframe src="https://www.youtube.com/embed/hj5Xv2L2X4M" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* <!-- Button modal step 2 --> */}
-            <div className="row">
+              {/* <!-- Button modal step 2 --> */}
+              <div className="row">
 
-              <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video2">
-                <img src="./image/detail/play.png" alt="icon" />
-              </button>
+                <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video2">
+                  <img src="./image/detail/play.png" alt="" />
+                </button>
 
-              {/* <!-- Modal --> */}
-              <div className="modal fade" id="video2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header align-items-baseline">
-                      <h1 className="modal-title fs-5" id="staticBackdropLabel">Video 2</h1>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
-                      <div className="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/venrE8gdz30" title="YouTube video player" frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen></iframe>
+                {/* <!-- Modal --> */}
+                <div className="modal fade" id="video2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header align-items-baseline">
+                        <h1 className="modal-title fs-5" id="staticBackdropLabel">Video 2</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div className="modal-body">
+                        <div className="ratio ratio-16x9">
+                          <iframe src="https://www.youtube.com/embed/venrE8gdz30" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* <!-- Button modal step 3 --> */}
-            <div className="row">
+              {/* <!-- Button modal step 3 --> */}
+              <div className="row">
 
-              <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video3">
-                <img src="./image/detail/play.png" alt="icon" />
-              </button>
+                <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video3">
+                  <img src="./image/detail/play.png" alt="" />
+                </button>
 
-              {/* <!-- Modal --> */}
-              <div className="modal fade" id="video3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header align-items-baseline">
-                      <h1 className="modal-title fs-5" id="staticBackdropLabel">Video 3</h1>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
-                      <div className="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/WpqUOW19aJQ" title="YouTube video player" frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen></iframe>
+                {/* <!-- Modal --> */}
+                <div className="modal fade" id="video3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header align-items-baseline">
+                        <h1 className="modal-title fs-5" id="staticBackdropLabel">Video 3</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div className="modal-body">
+                        <div className="ratio ratio-16x9">
+                          <iframe src="https://www.youtube.com/embed/WpqUOW19aJQ" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* <!-- Button modal step 4 --> */}
-            <div className="row">
-              <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video4">
-                <img src="./image/detail/play.png" alt="icon" />
-              </button>
+              {/* <!-- Button modal step 4 --> */}
+              <div className="row">
+                <button type="button" className="btn btn-warning btn-step" data-bs-toggle="modal" data-bs-target="#video4">
+                  <img src="./image/detail/play.png" alt="" />
+                </button>
 
-              {/* <!-- Modal --> */}
-              <div className="modal fade" id="video4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header align-items-baseline">
-                      <h1 className="modal-title fs-5" id="staticBackdropLabel">Video 4</h1>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
-                      <div className="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/uPCi5Rs7EuA" title="YouTube video player" frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen></iframe>
+                {/* <!-- Modal --> */}
+                <div className="modal fade" id="video4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header align-items-baseline">
+                        <h1 className="modal-title fs-5" id="staticBackdropLabel">Video 4</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div className="modal-body">
+                        <div className="ratio ratio-16x9">
+                          <iframe src="https://www.youtube.com/embed/uPCi5Rs7EuA" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
-          {/* <!-- form comments --> */}
-          <div className="container mx-2">
-            <div className="mt-lg-5 text-center">
-              <label for="comment-form" className="form-label"></label>
-              <textarea className="form-control" id="comment-form" rows="6">Comments</textarea>
-              <button className="btn btn-lg btn-warning mt-3 btn-send">
-                <p className="text-center">Send</p>
-              </button>
-            </div>
+        </div>
+      </section>
+      {/* <!-- form comments --> */}
+      <section>
+        <div className="container mx-auto">
+          <div className="mt-lg-5 text-center">
+            <label for="comment-form" className="form-label"></label>
+            <textarea className="form-control" id="comment-form" rows="6">Comments</textarea>
+            <button className="btn btn-lg btn-warning mt-3 btn-send">
+              <p className="text-center">Send</p>
+            </button>
           </div>
           {/* <!-- Comments coloumn --> */}
           <div>
             <h2>Comments</h2>
             <div className="row">
               <div className="col-1 ms-lg-5">
-                <img src="./image/detail/user.jpg" alt="..." width="45px" height="45px" className="rounded-circle" />
+                <img src="./image/detail/user.jpg" width="45px" height="45px" className="rounded-circle" />
               </div>
-              <div className="col-8 mb-xs-4 ms-4">
+              <div className="col-8 ms-4 mb-lg-5 mb-xs-4">
                 <h5>RachmadNH</h5>
                 <p>Nice recipe, delicious and simple, thankyou</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
+      </section >
       {/* <!-- footer --> */}
-      <footer>
+      < footer >
         <div>
           <h2>Eat, Cook, Repeat</h2>
           <p>Share your best recipe by uploading here !</p>
@@ -222,9 +229,9 @@ function Detail() {
             <p>Copyright 2022 by RNH. All Rights Reserved.</p>
           </div>
         </div>
-      </footer>
+      </ footer>
       {/* <!-- end of footer --> */}
-    </div>
+    </div >
   );
 }
 

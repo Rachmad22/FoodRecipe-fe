@@ -26,9 +26,16 @@ body {
     }
 }
 
+
 #header h1, h2{
     font-family: 'Poppins', sans-serif;
 }
+
+#header .photo{
+    object-fit: cover;
+    border-radius: 1em;
+}
+
 
 /* content mobile version */
 @media screen and (max-width: 600px) {
@@ -37,13 +44,21 @@ body {
     }
 
     #header .photo{
-        width: 90%;
+        width: 100%;
         height: 300px;
         object-fit: cover;
     }
 
 
-    #header h2, .list-group, .button{
+    #header h2{
+        margin-left: 30px;
+    }
+
+    .list-group{
+        margin-left: 30px;
+    }
+    #video .button{
+        margin-top: 50px;
         margin-left: 30px;
     }
 

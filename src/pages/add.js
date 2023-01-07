@@ -28,18 +28,18 @@ function Add() {
             <div className="navbar-nav">
               <Link className="nav-link active me-5" to="/">Home
               </Link>
-              <Link className="nav-link me-5" to="add">
+              <Link className="nav-link me-5" to="/add">
                 Add Recipe
               </Link>
-              <Link className="nav-link me-5" to="profile">
+              <Link className="nav-link me-5" to="/profile">
                 Profile
               </Link>
             </div>
             <div className="ms-auto">
-              <Link to="login">
+              <Link to="/login">
                 <button type="button" className="btn btn-light me-2">Log In</button>
               </Link>
-              <Link to="signup">
+              <Link to="/signup">
                 <button type="button" className="btn btn-warning">Sign Up</button>
               </Link>
             </div>
