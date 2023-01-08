@@ -1,5 +1,5 @@
 # FoodRecipe-fe
-frontend food recipe app. The app is built using html, css, and bootstrap5.
+frontend food recipe app. The app is built using html, css, and bootstrap5. no connection to DB
 
 # Demo
 You can demo app using this url : https://my-foodrecipe.netlify.app/
