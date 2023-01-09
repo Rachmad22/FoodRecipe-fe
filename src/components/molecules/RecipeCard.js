@@ -10,7 +10,7 @@ function RecipeCard(props) {
           src={image || "./images/home/recipe-1.jpg"}
           height="100%"
           width="100%"
-          alt="..."
+          alt={image}
 
           className="img-recipe"
         />

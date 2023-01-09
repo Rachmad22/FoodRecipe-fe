@@ -7,28 +7,34 @@ import { Link } from "react-router-dom";
 
 const menu = [
   {
+    id: 1,
     name: "Chicken Kare",
-    image: "./image/home/recipe-1.jpg",
+    image: "/image/home/recipe-1.webp",
   },
   {
+    id: 2,
     name: "Bomb Chicken",
-    image: "./image/home/recipe-2.jpg",
+    image: "/image/home/recipe-2.webp",
   },
   {
+    id: 3,
     name: "Banana Smothie Pop",
-    image: "./image/home/recipe-3.png",
+    image: "/image/home/recipe-3.webp",
   },
   {
+    id: 4,
     name: "Coffee Lava Cake",
-    image: "./image/home/recipe-4.jpg",
+    image: "/image/home/recipe-4.webp",
   },
   {
+    id: 5,
     name: "Sugar Salmon",
-    image: "./image/home/recipe-5.jpg",
+    image: "/image/home/recipe-5.webp",
   },
   {
+    id: 6,
     name: "India Salad",
-    image: "./image/home/recipe-6.jpg",
+    image: "/image/home/recipe-6.webp",
   },
 ];
 
@@ -80,7 +86,7 @@ function Home() {
           <div className="row align-items-center">
             {/* <!-- side left --> */}
             <div className="col-lg-6 col-xs-12">
-              <img src="./image/home/new-recipe.jpg" width="100%" height="500px" className="main-image" />
+              <img src="./image/home/new-recipe.webp" width="100%" height="500px" className="main-image" />
             </div>
             {/* <!-- side right --> */}
             <div className="col-lg-5 offset-lg-1 col-xs-12 mt-xs-5">

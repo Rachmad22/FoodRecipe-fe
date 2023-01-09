@@ -11,7 +11,7 @@ import Maintenance from "./pages/Maintenance";
 
 // functional component
 function App() {
-  const maintenance = ["/profile", "/add"];
+  const maintenance = ["/profile"];
   const router = createBrowserRouter([
     {
       path: "/",
@@ -43,8 +43,7 @@ function App() {
     }
   ]);
 
-  // JSX
-  // return <RouterProvider router={router} />;
+
   const isPageMaintenance =
     process.env.REACT_APP_IS_MAINTENANCE === "true" &&
     maintenance.find((res) => res === document.location.pathname);

@@ -6,7 +6,7 @@ body {
 
 /* background login page */
 .bg-login {
-    background-image: url(./login.jpg);
+    background-image: url(./login.webp);
     background-size: cover;
 
     /* set logo to center of display */
