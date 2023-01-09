@@ -27,8 +27,9 @@ body {
 }
 
 
-#header h1, h2{
-    font-family: 'Poppins', sans-serif;
+#header h1{
+    display: block;
+    text-align: center;
 }
 
 #header .photo{
@@ -36,11 +37,19 @@ body {
     border-radius: 1em;
 }
 
+.list-group{
+    margin-left: 30px;
+}
 
 /* content mobile version */
 @media screen and (max-width: 600px) {
+
+    #header{
+        margin-bottom: 10px;
+    }
+    
     #header h1{
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     #header .photo{
@@ -50,20 +59,16 @@ body {
     }
 
 
-    #header h2{
-        margin-left: 30px;
-    }
-
     .list-group{
-        margin-left: 30px;
+        margin-bottom: 50px;
     }
     #video .button{
         margin-top: 50px;
         margin-left: 30px;
     }
 
-    #header .btn-send{
-        margin-bottom: 30px;
+.btn-send{
+        margin-bottom: 50px;
     }
 
 }
@@ -79,6 +84,7 @@ body {
     width: 200px;
     height: 40px;
     margin-top: 15px;
+    margin-bottom: 30px;
 }
 
 .btn-send p{

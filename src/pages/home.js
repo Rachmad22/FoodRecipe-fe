@@ -1,51 +1,42 @@
 import React from "react";
 import "../styles/home.css";
+import Navbar from "../components/organisms/Navbar";
+import Footer from "../components/organisms/Footer";
+import RecipeCard from "../components/molecules/RecipeCard";
 import { Link } from "react-router-dom";
 
-// single page application
+const menu = [
+  {
+    name: "Chicken Kare",
+    image: "./image/home/recipe-1.jpg",
+  },
+  {
+    name: "Bomb Chicken",
+    image: "./image/home/recipe-2.jpg",
+  },
+  {
+    name: "Banana Smothie Pop",
+    image: "./image/home/recipe-3.png",
+  },
+  {
+    name: "Coffee Lava Cake",
+    image: "./image/home/recipe-4.jpg",
+  },
+  {
+    name: "Sugar Salmon",
+    image: "./image/home/recipe-5.jpg",
+  },
+  {
+    name: "India Salad",
+    image: "./image/home/recipe-6.jpg",
+  },
+];
 
 function Home() {
-  React.useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 100) {
-        document.querySelector(".navbar").classList.add("navbar-background");
-      } else {
-        document.querySelector(".navbar").classList.remove("navbar-background");
-      }
-    });
-  }, []);
-
   return (
     <div>
       {/* <!-- Start Navbar --> */}
-      <nav nav className="navbar navbar-expand-lg fixed-top" >
-        <div className="container">
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <Link className="nav-link active me-5" to="/">Home
-              </Link>
-              <Link className="nav-link me-5" to="/add">
-                Add Recipe
-              </Link>
-              <Link className="nav-link me-5" to="/profile">
-                Profile
-              </Link>
-            </div>
-            <div className="ms-auto">
-              <Link to="/login">
-                <button type="button" className="btn btn-light me-2">Log In</button>
-              </Link>
-              <Link to="/signup">
-                <button type="button" className="btn btn-warning">Sign Up</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav >
+      <Navbar />
       {/* <!-- End of Navbar --> */}
 
       {/* < !--header --> */}
@@ -121,84 +112,22 @@ function Home() {
 
           {/* <!-- recipe list --> */}
           <div className="row">
-            <div className="col-lg-4 col-6 mb-3">
-              <div className="clickable-image">
-                <Link to="/detail">
-                  <img src="./image/home/recipe-1.jpg" height="100%" width="100%" className="img-recipe" />
-                  <h2 className="image-title text-black">
-                    Chicken Kare
-                  </h2>
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-4 col-6 mb-3">
-              <div className="clickable-image">
-                <Link to="/detail">
-                  <img src="./image/home/recipe-2.jpg" height="100%" width="100%" className="img-recipe" />
-                  <h2 className="image-title text-black">
-                    Bomb Chicken
-                  </h2>
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-4 col-6 mb-3">
-              <div className="clickable-image">
-                <Link to="/detail">
-                  <img src="./image/home/recipe-3.png" height="100%" width="100%" className="img-recipe" />
-                  <h2 className="image-title text-black">
-                    Banana Smothie Pop
-                  </h2>
-                </Link>
-              </div>
-            </div>
-            <div className="row mt-4">
-              <div className="col-lg-4 col-6 mb-3">
-                <div className="clickable-image">
-                  <Link to="/detail">
-                    <img src="./image/home/recipe-4.jpg" height="100%" width="100%" className="img-recipe" />
-                    <h2 className="image-title text-black">
-                      Coffee Lava Cake
-                    </h2>
-                  </Link>
-                </div>
-              </div>
-              <div className="col-lg-4 col-6 mb-3">
-                <div className="clickable-image">
-                  <Link to="/detail">
-                    <img src="./image/home/recipe-5.jpg" height="100%" width="100%" className="img-recipe" />
-                    <h2 className="image-title text-black">
-                      Sugar Salmon
-                    </h2>
-                  </Link>
-                </div>
-              </div>
+          {menu.map((item) => (
               <div className="col-lg-4 col-6">
-                <div className="clickable-image">
-                  <Link to="/detail">
-                    <img src="./image/home/recipe-6.jpg" height="100%" width="100%" className="img-recipe" />
-                    <h2 className="image-title text-black">
-                      Indian Salad
-                    </h2>
-                  </Link>
-                </div>
+                <RecipeCard
+                  image={item?.image}
+                  name={item?.name}
+                  url={item?.name?.toLocaleLowerCase()?.split(" ").join("-")}
+                />
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
       {/* <!--end of popular recipe-- > */}
 
       {/* < !--footer --> */}
-      <footer>
-        <div>
-          <h2>Eat, Cook, Repeat</h2>
-          <p>Share your best recipe by uploading here !</p>
-
-          <div className="footer-link">
-            <p>Copyright 2022 by RNH. All Rights Reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

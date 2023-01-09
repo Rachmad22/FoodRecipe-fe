@@ -1,68 +1,36 @@
 import React from "react";
+import Navbar from "../components/organisms/Navbar";
+import Footer from "../components/organisms/Footer";
 import "../styles/detail.css";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // single page application
 
 function Detail() {
-  React.useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 100) {
-        document.querySelector(".navbar").classList.add("navbar-background");
-      } else {
-        document.querySelector(".navbar").classList.remove("navbar-background");
-      }
-    });
-  }, []);
-
+  let { name } = useParams();
   return (
     <div>
       {/* <!-- Start Navbar --> */}
-      <nav nav className="navbar navbar-expand-lg fixed-top" >
-        <div className="container">
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <Link className="nav-link active me-5" to="/">Home
-              </Link>
-              <Link className="nav-link me-5" to="/add">
-                Add Recipe
-              </Link>
-              <Link className="nav-link me-5" to="/profile">
-                Profile
-              </Link>
-            </div>
-            <div className="ms-auto">
-              <Link to="/login">
-                <button type="button" className="btn btn-light me-2">Log In</button>
-              </Link>
-              <Link to="/signup">
-                <button type="button" className="btn btn-warning">Sign Up</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav >
+      <Navbar />
       {/* <!-- End of Navbar --> */}
 
       {/* <!-- Content --> */}
       <section id="header">
-        {/* <!-- setting margin right & left the page --> */}
         <div className="container">
           {/* <!-- Title and Image --> */}
-          <div className="row">
-            <div className="mx-auto col-lg-6">
-              <h1 className="text-center mb-lg-4 mb-xs-5">Loream Sandwich</h1>
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <h1 className="text-black mb-lg-4 mb-xs-5">{name || "Loream Sandwich"}</h1>
               <img src="./image/detail/detail1.jpg" className="photo" width="600px" height="400px" />
             </div>
           </div>
-          {/* <!-- List ingredients --> */}
-          <div className="row mt-5">
+        </div>
+      </section>
+      {/* <!-- List ingredients --> */}
+      <section>
+        <div className="container">
+          <div className="row">
             <div className="col-lg-6">
-
               <h2>Ingredients</h2>
               <ul className="list-group">
                 <li>2 eggs</li>
@@ -207,7 +175,7 @@ function Detail() {
           {/* <!-- Comments coloumn --> */}
           <div>
             <h2>Comments</h2>
-            <div className="row">
+            <div className="row mt-2">
               <div className="col-1 ms-lg-5">
                 <img src="./image/detail/user.jpg" width="45px" height="45px" className="rounded-circle" />
               </div>
@@ -220,16 +188,7 @@ function Detail() {
         </div>
       </section >
       {/* <!-- footer --> */}
-      < footer >
-        <div>
-          <h2>Eat, Cook, Repeat</h2>
-          <p>Share your best recipe by uploading here !</p>
-
-          <div className="footer-link">
-            <p>Copyright 2022 by RNH. All Rights Reserved.</p>
-          </div>
-        </div>
-      </ footer>
+      <Footer />
       {/* <!-- end of footer --> */}
     </div >
   );
