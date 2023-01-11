@@ -3,42 +3,84 @@ import "../styles/home.css";
 import Navbar from "../components/organisms/Navbar";
 import Footer from "../components/organisms/Footer";
 import RecipeCard from "../components/molecules/RecipeCard";
+import SpinnerGroup from "../components/molecules/SpinnerGroup";
 import { Link } from "react-router-dom";
 
-const menu = [
-  {
-    id: 1,
-    name: "Chicken Kare",
-    image: "/image/home/recipe-1.webp",
-  },
-  {
-    id: 2,
-    name: "Bomb Chicken",
-    image: "/image/home/recipe-2.webp",
-  },
-  {
-    id: 3,
-    name: "Banana Smothie Pop",
-    image: "/image/home/recipe-3.webp",
-  },
-  {
-    id: 4,
-    name: "Coffee Lava Cake",
-    image: "/image/home/recipe-4.webp",
-  },
-  {
-    id: 5,
-    name: "Sugar Salmon",
-    image: "/image/home/recipe-5.webp",
-  },
-  {
-    id: 6,
-    name: "India Salad",
-    image: "/image/home/recipe-6.webp",
-  },
-];
+// const menu = [
+//   {
+//     id: 1,
+//     name: "Chicken Kare",
+//     image: "/image/home/recipe-1.webp",
+//   },
+//   {
+//     id: 2,
+//     name: "Bomb Chicken",
+//     image: "/image/home/recipe-2.webp",
+//   },
+//   {
+//     id: 3,
+//     name: "Banana Smothie Pop",
+//     image: "/image/home/recipe-3.webp",
+//   },
+//   {
+//     id: 4,
+//     name: "Coffee Lava Cake",
+//     image: "/image/home/recipe-4.webp",
+//   },
+//   {
+//     id: 5,
+//     name: "Sugar Salmon",
+//     image: "/image/home/recipe-5.webp",
+//   },
+//   {
+//     id: 6,
+//     name: "India Salad",
+//     image: "/image/home/recipe-6.webp",
+//   },
+// ];
 
 function Home() {
+  let [menu, setMenu] = React.useState([]);
+  let [isLoading, setIsLoading] = React.useState(true);
+
+  // set feature loading 
+  React.useEffect(()=>{
+    // remove loading animation
+    setIsLoading(false);
+    // present popular recipe data
+    setMenu([
+      {
+        id: 1,
+        name: "Chicken Kare",
+        image: "/image/home/recipe-1.webp",
+      },
+      {
+        id: 2,
+        name: "Bomb Chicken",
+        image: "/image/home/recipe-2.webp",
+      },
+      {
+        id: 3,
+        name: "Banana Smothie Pop",
+        image: "/image/home/recipe-3.webp",
+      },
+      {
+        id: 4,
+        name: "Coffee Lava Cake",
+        image: "/image/home/recipe-4.webp",
+      },
+      {
+        id: 5,
+        name: "Sugar Salmon",
+        image: "/image/home/recipe-5.webp",
+      },
+      {
+        id: 6,
+        name: "India Salad",
+        image: "/image/home/recipe-6.webp",
+      },
+    ])
+  })
   return (
     <div>
       {/* <!-- Start Navbar --> */}
@@ -115,6 +157,10 @@ function Home() {
           <div className="container">
             <h2 className="title">Popular Recipe</h2>
           </div>
+{/* if loading = loading animation, else null */}
+          {isLoading ? <SpinnerGroup /> : null}
+          
+          {menu.length === 0 && !isLoading ? <h2>Recipe not found</h2> : null}
 
           {/* <!-- recipe list --> */}
           <div className="row">

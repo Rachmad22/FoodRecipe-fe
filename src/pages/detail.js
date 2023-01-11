@@ -5,7 +5,6 @@ import "../styles/detail.css";
 import ModalVideos from "../components/molecules/ModalVideos";
 import { useParams } from "react-router-dom";
 
-// single page application
 
 function Detail() {
   let { name, image } = useParams();

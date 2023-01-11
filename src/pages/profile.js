@@ -31,9 +31,9 @@ function Profile() {
                 <div className="container-fluid">
                   <div id="navbar-profile">
                     <div className="navbar-nav">
-                      <a className="nav-link active fw-bolder me-lg-4" aria-current="page" href="#">My Recipe</a>
-                      <a className="nav-link fw-bolder me-lg-4" href="#">Saved Recipe</a>
-                      <a className="nav-link fw-bolder me-lg-4" href="#">Liked Recipe</a>
+                      <Link to="" className="nav-link active fw-bolder me-lg-4" aria-current="page">My Recipe</Link>
+                      <Link to="" className="nav-link fw-bolder me-lg-4" >Saved Recipe</Link>
+                      <Link to="" className="nav-link fw-bolder me-lg-4" >Liked Recipe</Link>
                     </div>
                   </div>
                 </div>
@@ -44,10 +44,14 @@ function Profile() {
           {/* <!-- thumbnail profile --> */}
           <div className="row mt-4 mb-4" id="myrecipe">
             <div className="col-lg-3 position-static">
-              <img src="./image/profile/photo1.jpg" alt="" width="100%" height="175px" className="thumbnail" />
+              <Link to="/detail">
+                <img src="./image/profile/photo1.jpg" alt="myrecipe" width="100%" height="175px" className="thumbnail" />
+                </Link>
             </div>
             <div className="col-lg-3 position-static thumbnail">
-              <img src="./image/profile/photo2.jpg" alt="" width="100%" height="175px" className="thumbnail" />
+              <Link to="/detail">
+                <img src="./image/profile/photo2.jpg" alt="myrecipe" width="100%" height="175px" className="thumbnail" />
+              </Link>
             </div>
           </div>
         </div>
