@@ -4,21 +4,40 @@ body {
     overflow-x: hidden;
 }
 
-/* background signup */
-.bg-signup {
-    background-image: url(./login.webp);
-    background-size: cover;
-    
 
+#signup .logo{
     /* set logo to center of display */
+    height: 60vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
+    z-index: 5;
+}
+#signup .mama{
+color: white;
+display: flex;
+justify-content: center;
+align-items: baseline;
+z-index: 4;
+}
+
+/* background login page */
+#signup .bg-login {
+background-image: url(./login.webp);
+background-size: cover;
+}
+
+#signup .overlay-background {
+height: 131vh;
+width: 50%;
+background-color: #efc81a;
+position: absolute;
+z-index: 0;
+opacity: 0.4;
 }
 
 /* centering form signup */
 .form-signup {
-
     /* set content to center of display */
     display: flex;
     justify-content: center;

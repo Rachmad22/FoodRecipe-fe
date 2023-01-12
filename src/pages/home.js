@@ -43,6 +43,7 @@ function Home() {
   let [menu, setMenu] = React.useState([]);
   let [isLoading, setIsLoading] = React.useState(true);
 
+
   // set feature loading 
   React.useEffect(()=>{
     // remove loading animation
@@ -123,12 +124,13 @@ function Home() {
 
         {/* <!-- background --> */}
         <div className="background-overlay"></div>
+
         {/* <!-- content --> */}
         <div className="container">
           <div className="row align-items-center">
             {/* <!-- side left --> */}
             <div className="col-lg-6 col-xs-12">
-              <img src="./image/home/new-recipe.webp" width="100%" height="500px" className="main-image" />
+              <img src="./image/home/new-recipe.webp" alt="new" width="100%" height="500px" className="main-image" />
             </div>
             {/* <!-- side right --> */}
             <div className="col-lg-5 offset-lg-1 col-xs-12 mt-xs-5">

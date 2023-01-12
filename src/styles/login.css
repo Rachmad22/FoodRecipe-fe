@@ -4,23 +4,36 @@ body {
     overflow-x: hidden;
 }
 
-/* background login page */
-.bg-login {
-    background-image: url(./login.webp);
-    background-size: cover;
-
-    /* set logo to center of display */
+#login .logo{
+        /* set logo to center of display */
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        z-index: 5;
+}
+#login .mama{
+    color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    z-index: 4;
 }
 
-/* .overlay-background{
+/* background login page */
+#login .bg-login {
+    background-image: url(./login.webp);
+    background-size: cover;
+}
+
+#login .overlay-background {
+    height: 100vh;
+    width: 50vw;
+    background-color: #efc81a;
     position: absolute;
-    z-index: 5;
-    background-color: #EFC81A;
-    opacity: 0.5;
-} */
+    z-index: 0;
+    opacity: 0.4;
+}
 
 /* layout form login */
 .form-login {
@@ -66,7 +79,7 @@ body {
 
 @media (max-width: 600px) {
 
-    .form-login .form-width{
+    .form-login .form-width {
         width: 250px;
     }
 }
@@ -95,13 +108,12 @@ body {
     color: #999999;
 }
 
-.form-login .signup{
+.form-login .signup {
     text-decoration: none;
     color: #EFC81A;
 }
 
 /* coloring text in login button */
-.form-login .d-grid .login{
+.form-login .d-grid .login {
     color: white;
 }
-

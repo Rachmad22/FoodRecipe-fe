@@ -4,16 +4,36 @@ body {
     overflow-x: hidden;
 }
 
-/* background forgot */
-.bg-forgot {
-    background-image: url(./login.webp);
-    background-size: cover;
-    height: 100vh;
-
+#forgot .logo {
     /* set logo to center of display */
+    height: 60vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
+    z-index: 5;
+}
+
+#forgot .mama {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    z-index: 4;
+}
+
+/* background login page */
+#forgot .bg-login {
+    background-image: url(./login.webp);
+    background-size: cover;
+}
+
+#forgot .overlay-background {
+    height: 100vh;
+    width: 50vw;
+    background-color: #efc81a;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.4;
 }
 
 /* form forgot */
@@ -59,11 +79,11 @@ body {
 }
 
 /* setup forgot button */
-.form-forgot .d-grid{
+.form-forgot .d-grid {
     margin-top: 30px;
 }
 
 /* coloring text in forgot button */
-.form-forgot .d-grid .forgot{
+.form-forgot .d-grid .forgot {
     color: white;
 }

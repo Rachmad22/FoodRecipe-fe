@@ -5,27 +5,21 @@ import { Link } from "react-router-dom";
 // single page application
 
 function Signup() {
-  React.useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 100) {
-        document.querySelector(".navbar").classList.add("navbar-background");
-      } else {
-        document.querySelector(".navbar").classList.remove("navbar-background");
-      }
-    });
-  }, []);
 
   return (
     <div>
-      <section id="login">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-6 bg-signup">
-              <div>
-                <img src="image/logo.png" width="100px" height="100px" />
-                <p class="text-white text-center mt-2">Mama Recipe.</p>
+      <section id="signup">
+          <div className="overlay-background"></div>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-6 bg-login">
+                <div className="logo">
+                  <img src="image/logo.png" alt="logo" width="100px" height="100px" />
+                </div>
+                <div className="mama">
+                  <p>Mama Recipe.</p>
+                </div>
               </div>
-            </div>
             <div class="col-6 mt-5 form-signup">
               <div>
                 <h1>Let's Get Started !</h1>
@@ -60,8 +54,8 @@ function Signup() {
                 <div class="d-grid">
                   <button type="button" class="btn btn-warning btn-lg regis">Register Account</button>
                 </div>
-                <p class="already-have-account">Already have account? <Link to="/login">
-                  <a class="login"> Log In Here</a>
+                <p class="already-have-account">Already have account? <Link to="/login" class="login">
+                  Log In Here
                   </Link>
                   </p>
               </div>
