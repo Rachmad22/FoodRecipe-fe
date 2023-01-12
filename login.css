@@ -15,12 +15,12 @@ body {
     align-items: center;
 }
 
-/* .overlay-background{
+.overlay-background{
     position: absolute;
     z-index: 5;
     background-color: #EFC81A;
     opacity: 0.5;
-} */
+}
 
 /* layout form login */
 .form-login {
