@@ -1,12 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Forgot from "./pages/Forgot";
-import Signup from "./pages/Signup";
-import Detail from "./pages/Detail";
-import Add from "./pages/Add";
-import Profile from "./pages/Profile";
-import Maintenance from "./pages/Maintenance";
+import Home from "./pages/Homes";
+import Login from "./pages/Logins";
+import Forgot from "./pages/Forgots";
+import Signup from "./pages/Signups";
+import Detail from "./pages/Details";
+import Add from "./pages/Adds";
+import Profile from "./pages/Profiles";
+import Maintenance from "./pages/Maintenances";
 
 
 // functional component
@@ -47,8 +47,8 @@ function App() {
   const isPageMaintenance =
     process.env.REACT_APP_IS_MAINTENANCE === "true" &&
     maintenance.find((res) => res === document.location.pathname);
-
   if (isPageMaintenance) {
+    
     return <Maintenance />;
   } else {
     // JSX
