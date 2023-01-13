@@ -1,0 +1,89 @@
+html,
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#forgot .logo {
+    /* set logo to center of display */
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    z-index: 5;
+}
+
+#forgot .mama {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    z-index: 4;
+}
+
+/* background login page */
+#forgot .bg-login {
+    background-image: url(./login.webp);
+    background-size: cover;
+}
+
+#forgot .overlay-background {
+    height: 100vh;
+    width: 50vw;
+    background-color: #efc81a;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+/* form forgot */
+.form-forgot {
+    height: 100vh;
+
+    /* set content to center of display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-forgot h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+
+    display: block;
+    text-align: center;
+
+    color: #EFC81A;
+
+}
+
+.form-forgot p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    display: block;
+    text-align: center;
+
+    color: #8692A6;
+}
+
+.form-forgot .form-width {
+    width: 430px;
+    height: 64px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+/* setup forgot button */
+.form-forgot .d-grid {
+    margin-top: 30px;
+}
+
+/* coloring text in forgot button */
+.form-forgot .d-grid .forgot {
+    color: white;
+}

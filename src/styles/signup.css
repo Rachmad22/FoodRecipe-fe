@@ -1,0 +1,106 @@
+html,
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+#signup .logo{
+    /* set logo to center of display */
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    z-index: 5;
+}
+#signup .mama{
+color: white;
+display: flex;
+justify-content: center;
+align-items: baseline;
+z-index: 4;
+}
+
+/* background login page */
+#signup .bg-login {
+background-image: url(./login.webp);
+background-size: cover;
+}
+
+#signup .overlay-background {
+height: 131vh;
+width: 50%;
+background-color: #efc81a;
+position: absolute;
+z-index: 0;
+opacity: 0.4;
+}
+
+/* centering form signup */
+.form-signup {
+    /* set content to center of display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-signup h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+
+    display: block;
+    text-align: center;
+
+    color: #EFC81A;
+
+}
+
+.form-signup p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    display: block;
+    text-align: center;
+
+    color: #8692A6;
+}
+
+/* lenght of signup form */
+.form-signup .form-width {
+    width: 430px;
+    height: 64px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+/* lenght of signup form in mobile */
+
+@media (max-width: 600px) {
+    .form-signup .form-width{
+        width: 250px;
+    }
+
+    .form-signup .already-have-account{
+        font-size: 12px;
+    }
+}
+
+/* checklist term */
+.form-signup .form-check{
+    margin-top: 35px;
+}
+
+/* coloring text in signup button */
+.form-signup .d-grid .regis{
+    color: white;
+}
+
+/* login link styling */
+.form-signup .login{
+    text-decoration: none;
+    color: #EFC81A;
+}
