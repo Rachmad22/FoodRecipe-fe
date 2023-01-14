@@ -33,7 +33,11 @@ width: 50%;
 background-color: #efc81a;
 position: absolute;
 z-index: 0;
-opacity: 0.4;
+opacity: 0.5;
+}
+#signup .index{
+    position: absolute;
+    z-index: 5;
 }
 
 /* centering form signup */

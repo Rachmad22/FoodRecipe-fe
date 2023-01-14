@@ -42,6 +42,8 @@ import { Link } from "react-router-dom";
 function Home() {
   let [menu, setMenu] = React.useState([]);
   let [isLoading, setIsLoading] = React.useState(true);
+  // let [currentPage, setCurrentPage] = React.useState(1);
+  // let [totalPage, setTotalPage] = React.useState(1);
 
 
   // set feature loading 

@@ -9,15 +9,17 @@ function Login() {
   return (
     <div>
       <section id="login">
-          <div className="overlay-background"></div>
           <div className="container-fluid">
             <div className="row">
+          <div className="overlay-background"></div>
               <div className="col-6 bg-login">
-                <div className="logo">
-                  <img src="image/logo.png" alt="logo" width="100px" height="100px" />
-                </div>
+                <div>
+                  <div className="logo">
+                  <img src="image/logo.png" className="index" alt="logo" width="100px" height="100px" />
+                  </div>
                 <div className="mama">
-                  <p>Mama Recipe.</p>
+                  <p className="index">Mama Recipe.</p>
+                </div>
                 </div>
               </div>
             {/* <!-- form login --> */}
