@@ -12,7 +12,7 @@ function RecipeCard(props) {
           width="100%"
           alt={image}
 
-          className="img-recipe"
+          className="placeholder-glow img-recipe"
         />
         <h2 className="image-title text-black">
           {name || "Unknown"}

@@ -15,7 +15,7 @@ function Maintenance() {
                         justifyContent: "center",
                     }}
                 >
-                    <img src="/image/maintenance.svg" width="300px" />
+                    <img src="/image/maintenance.svg" alt="maintainance" width="300px" />
                 </div>
                 <h1>Page undermaintenace</h1>
             </div>
