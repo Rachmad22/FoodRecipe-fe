@@ -47,8 +47,8 @@ function App() {
   const isPageMaintenance =
     process.env.REACT_APP_IS_MAINTENANCE === "true" &&
     maintenance.find((res) => res === document.location.pathname);
-
   if (isPageMaintenance) {
+    
     return <Maintenance />;
   } else {
     // JSX
