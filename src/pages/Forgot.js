@@ -13,10 +13,10 @@ function Forgot() {
                     <div className="row">
                         <div className="col-6 bg-login">
                             <div className="logo">
-                                <img src="image/logo.png" className="index" alt="logo" width="100px" height="100px" />
+                                <img src="image/logo.png" alt="logo" width="100px" height="100px" />
                             </div>
                             <div className="mama">
-                                <p className="index">Mama Recipe.</p>
+                                <p>Mama Recipe.</p>
                             </div>
                         </div>
                         <div class="col-6 form-forgot">

@@ -2,21 +2,8 @@ import React from "react";
 import Navbar from "../components/organisms/Navbar";
 import Footer from "../components/organisms/Footer";
 import "../styles/add.css";
-import { useNavigate } from "react-router-dom";
-
 
 function Add() {
-  const navigate = useNavigate();
-
-  // check if already login
-  React.useEffect(() => {
-    const isLogin = localStorage.getItem("isLogin");
-    const token = localStorage.getItem("token");
-
-    if (!isLogin && !token) {
-      navigate("/login"); // navigate to home
-    }
-  }, []);
   return (
     <div>
       {/* <!-- Start Navbar --> */}

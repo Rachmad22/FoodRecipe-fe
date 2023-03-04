@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
+import React from "react";
+import Home from "./pages/Index";
 import Login from "./pages/Login";
 import Forgot from "./pages/Forgot";
 import Signup from "./pages/Signup";
@@ -7,11 +8,12 @@ import Detail from "./pages/Detail";
 import Add from "./pages/Add";
 import Profile from "./pages/Profile";
 import Maintenance from "./pages/Maintenance";
-import React from "react";
+
 
 // functional component
 function App() {
-  const maintenance = [];
+  const maintenance = ["/profile"];
+
   const [isPageMaintenance, setIsPageMaintenance] = React.useState(
     process.env.REACT_APP_IS_MAINTENANCE === "true" &&
       maintenance.find((res) => res === document.location.pathname)
@@ -48,14 +50,12 @@ function App() {
   ]);
 
 
-
   if (isPageMaintenance) {
-    
-    return <Maintenance 
+    return <Maintenance
     maintenanceList={maintenance}
     turnOnMaintenance={() => setIsPageMaintenance(true)}
     turnOffMaintenance={() => setIsPageMaintenance(false)}
-    />;
+  />;
   } else {
     // JSX
     return <RouterProvider router={router} />;

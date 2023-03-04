@@ -1,6 +1,18 @@
 import React from "react";
 
-function Maintenance() {
+function Maintenance(props) {
+    // Handle maintenance
+    React.useEffect(() => {
+        setInterval(() => {
+            if (
+                props.maintenanceList.find((res) => res === window.location.pathname)
+            ) {
+                props.turnOnMaintenance();
+            } else {
+                props.turnOffMaintenance();
+            }
+        }, 1000);
+    }, []);
     return (
         <div
             className="d-flex align-items-center justify-content-center"
@@ -15,7 +27,7 @@ function Maintenance() {
                         justifyContent: "center",
                     }}
                 >
-                    <img src="/image/maintenance.svg" alt="maintainance" width="300px" />
+                    <img src="/image/maintenance.svg" width="300px" />
                 </div>
                 <h1>Page undermaintenace</h1>
             </div>

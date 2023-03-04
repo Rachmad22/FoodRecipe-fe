@@ -32,12 +32,7 @@ body {
     background-color: #efc81a;
     position: absolute;
     z-index: 0;
-    opacity: 0.5;
-}
-
-#login .index{
-    position: absolute;
-    z-index: 5;
+    opacity: 0.4;
 }
 
 /* layout form login */

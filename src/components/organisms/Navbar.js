@@ -5,8 +5,12 @@ function Navbar() {
   const checkProfile = localStorage.getItem("profile")
     ? JSON.parse(localStorage.getItem("profile"))
     : null;
-  const [isLogin, setIsLogin] = React.useState(localStorage.getItem("isLogin"));
+  const [isSignIn, setIsSignIn] = React.useState(
+    localStorage.getItem("isSignIn")
+  );
+
   const [profile, setProfile] = React.useState(checkProfile);
+// console.log(profile?.photo)
 
   React.useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -38,40 +42,21 @@ function Navbar() {
                 Profile
               </Link>
             </div>
-        <div className="ms-auto">
-          {isLogin ? (
-            <div className="dropdown">
-              <img
-                src={profile.photo}
-                width="40px"
-                style={{ borderRadius: "50%" }}
-                alt="profile"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                />
-
-              <ul
-                className="dropdown-menu dropdown-menu-lg-end"
-                style={{ paddingLeft: "10px" }}
-                >
-                <li>
-                  <Link to="/profile">Profile</Link>
-                </li>
-                <li>
-                  <Link to="/logout">Logout</Link>
-                </li>
-              </ul>
-            </div>
-          ) : (
-            <div>
-              <Link to="/login">
-                <button type="button" className="btn btn-light me-2">Log In</button>
-              </Link>
-              <Link to="/signup">
-                <button type="button" className="btn btn-warning">Sign Up</button>
-              </Link>
-              </div>
-          )}
+            <div className="ms-auto">
+            {isSignIn ? (
+            <>
+            <img src={profile?.photo} alt="" style={{borderRadius: "50%", height: "50px", width: "50px"}} />
+            </>
+            ):(
+              <>
+                <Link to="/login">
+                  <button type="button" className="btn btn-light me-2">Log In</button>
+                </Link>
+                <Link to="/signup">
+                  <button type="button" className="btn btn-warning">Sign Up</button>
+                </Link>
+              </>
+            )}
             </div>
           </div>
         </div>

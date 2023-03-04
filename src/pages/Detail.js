@@ -3,44 +3,39 @@ import Navbar from "../components/organisms/Navbar";
 import Footer from "../components/organisms/Footer";
 import "../styles/detail.css";
 import ModalVideos from "../components/molecules/ModalVideos";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 
 
 function Detail() {
-  // let { name, image } = useParams();
+  const {recipe} = useSelector((state) => state);
+  console.log(recipe)
 
-  // const step = [
-  //   {
-  //     id : 1,
-  //     title : "video 1",
-  //     video : "https://www.youtube.com/embed/hj5Xv2L2X4M"
-  //   },
-  //   {
-  //     id : 2,
-  //     title : "video 2",
-  //     video : "https://www.youtube.com/embed/venrE8gdz30"
-  //   },
-  //   {
-  //     id : 3,
-  //     title : "video 3",
-  //     video : "https://www.youtube.com/embed/WpqUOW19aJQ"
-  //   },
-  //   {
-  //     id : 4,
-  //     title : "video 4",
-  //     video : "https://www.youtube.com/embed/uPCi5Rs7EuA"
-  //   },
-  // ]
-  const navigate = useNavigate();
-  const { recipe } = useSelector((state) => state);
+  let { name, photo } = useParams();
+  console.log(photo)
 
-  // console.log(recipe);
-  React.useEffect(() => {
-    if (!recipe?.data) {
-      navigate("/");
-    }
-  }, []);
+  const step = [
+    {
+      id : 1,
+      title : "video 1",
+      video : "https://www.youtube.com/embed/hj5Xv2L2X4M"
+    },
+    {
+      id : 2,
+      title : "video 2",
+      video : "https://www.youtube.com/embed/venrE8gdz30"
+    },
+    {
+      id : 3,
+      title : "video 3",
+      video : "https://www.youtube.com/embed/WpqUOW19aJQ"
+    },
+    {
+      id : 4,
+      title : "video 4",
+      video : "https://www.youtube.com/embed/uPCi5Rs7EuA"
+    },
+  ]
 
   return (
     <div>
@@ -54,16 +49,8 @@ function Detail() {
           {/* <!-- Title and Image --> */}
           <div className="row justify-content-center">
             <div className="col-lg-6">
-              <h1 className="text-black mb-lg-4 mb-xs-5">{recipe?.data?.name}</h1>
-              <img src={recipe?.data?.photo} alt="recipe" className="photo" width="600px" height="400px" />
-            </div>
-            <div className="bottom_action_image">
-              <div className="button_bookmark shadow-sm">
-                <img src="/images/bookmark.svg" alt="action" width="25px" />
-              </div>
-              <div className="button_like shadow-sm">
-                <img src="/images/like.svg" alt="like" width="25px" />
-              </div>
+              <h1 className="text-black mb-lg-4 mb-xs-5">{name || "Loream Sandwich"}</h1>
+              <img src={photo || "/image/detail/detail1.jpg"} alt={name} className="photo" width="600px" height="400px" />
             </div>
           </div>
         </div>
@@ -95,14 +82,14 @@ function Detail() {
               <h2>Video Step</h2>
               {/* <!-- Button modal step 1 --> */}
 
-              {recipe?.data.map((item) => (
-                <div className="row">
-                  <ModalVideos
-                    video={item?.video}
-                    title={item?.title}
-                  />
+              {step.map((item) => (
+              <div className="row">
+                <ModalVideos
+                  video={item?.video}
+                  title={item?.title}
+                />
                 </div>
-              ))}
+            ))}
             </div>
           </div>
         </div>
