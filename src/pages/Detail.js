@@ -5,37 +5,24 @@ import "../styles/detail.css";
 import ModalVideos from "../components/molecules/ModalVideos";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 
 function Detail() {
-  const {recipe} = useSelector((state) => state);
-  console.log(recipe)
+  const navigate = useNavigate();
+  const { recipe } = useSelector((state) => state);
 
-  let { name, photo } = useParams();
-  console.log(photo)
+  const recipeIngredient = recipe?.data?.ingredient?.split(",")
+  // var output = [videoLink.slice(0, pos), chr, str.slice(pos)].join('');
 
-  const step = [
-    {
-      id : 1,
-      title : "video 1",
-      video : "https://www.youtube.com/embed/hj5Xv2L2X4M"
-    },
-    {
-      id : 2,
-      title : "video 2",
-      video : "https://www.youtube.com/embed/venrE8gdz30"
-    },
-    {
-      id : 3,
-      title : "video 3",
-      video : "https://www.youtube.com/embed/WpqUOW19aJQ"
-    },
-    {
-      id : 4,
-      title : "video 4",
-      video : "https://www.youtube.com/embed/uPCi5Rs7EuA"
-    },
-  ]
+  // console.log(videoLink);
+  React.useEffect(() => {
+    if (!recipe?.data) {
+      navigate("/");
+    }
+  }, []);
+
+
 
   return (
     <div>
@@ -49,8 +36,8 @@ function Detail() {
           {/* <!-- Title and Image --> */}
           <div className="row justify-content-center">
             <div className="col-lg-6">
-              <h1 className="text-black mb-lg-4 mb-xs-5">{name || "Loream Sandwich"}</h1>
-              <img src={photo || "/image/detail/detail1.jpg"} alt={name} className="photo" width="600px" height="400px" />
+              <h1 className="text-black mb-lg-4 mb-xs-5">{recipe?.data?.name?.toLocaleUpperCase() || "Loream Sandwich"}</h1>
+              <img src={recipe?.data?.photo || "/image/detail/detail1.jpg"} alt={recipe?.data?.name} className="photo" width="600px" height="400px" />
             </div>
           </div>
         </div>
@@ -62,13 +49,13 @@ function Detail() {
             <div className="col-lg-6">
               <h2>Ingredients</h2>
               <ul className="list-group">
-                <li>2 eggs</li>
-                <li>2 tbsp mayonnaise</li>
-                <li>3 slices bread</li>
-                <li>a little butter</li>
-                <li>⅓ carton of cress</li>
-                <li>2-3 slices of tomato or a lettuce leaf <br /> and a slice of ham or cheese</li>
-                <li>crisps, to serve</li>
+                <li>{recipeIngredient?.[0]}</li>
+                <li>{recipeIngredient?.[1]}</li>
+                <li>{recipeIngredient?.[2]}</li>
+                <li>{recipeIngredient?.[3] || "a little butter"}</li>
+                <li>{recipeIngredient?.[4] || "⅓ carton of cress"}</li>
+                <li>{recipeIngredient?.[5] || "2-3 slices of tomato or a lettuce leaf "}</li>
+                <li>{recipeIngredient?.[6] || "crisps, to serve"}</li>
               </ul>
             </div>
           </div>
@@ -80,16 +67,13 @@ function Detail() {
           <div className="row mt-lg-5 button">
             <div classNameName="col-lg-4">
               <h2>Video Step</h2>
-              {/* <!-- Button modal step 1 --> */}
+              {/* <!-- Button modal --> */}
 
-              {step.map((item) => (
-              <div className="row">
-                <ModalVideos
-                  video={item?.video}
-                  title={item?.title}
-                />
-                </div>
-            ))}
+                  <div className="row">
+                    <ModalVideos />
+                  </div>
+
+
             </div>
           </div>
         </div>

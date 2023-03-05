@@ -44,9 +44,9 @@ function Navbar() {
             </div>
             <div className="ms-auto">
             {isSignIn ? (
-            <>
-            <img src={profile?.photo} alt="" style={{borderRadius: "50%", height: "50px", width: "50px"}} />
-            </>
+            <div>
+            <img src={profile?.photo || `https://static.vecteezy.com/system/resources/previews/002/400/532/original/young-happy-businessman-character-avatar-wearing-business-outfit-isolated-free-vector.jpg`} alt="" style={{borderRadius: "50%", height: "50px", width: "50px"}} />
+            </div>
             ):(
               <>
                 <Link to="/login">

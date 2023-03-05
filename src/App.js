@@ -9,10 +9,12 @@ import Add from "./pages/Add";
 import Profile from "./pages/Profile";
 import Maintenance from "./pages/Maintenance";
 
+import store from "./store";
+import { Provider } from "react-redux";
 
 // functional component
 function App() {
-  const maintenance = ["/profile"];
+  const maintenance = [""];
 
   const [isPageMaintenance, setIsPageMaintenance] = React.useState(
     process.env.REACT_APP_IS_MAINTENANCE === "true" &&
@@ -58,7 +60,9 @@ function App() {
   />;
   } else {
     // JSX
-    return <RouterProvider router={router} />;
+    return <Provider store={store}>
+      <RouterProvider router={router} />;
+    </Provider> 
   }
 }
 

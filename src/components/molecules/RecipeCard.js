@@ -1,12 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import * as recipeReducer from "../../store/recipe";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
 function RecipeCard(props) {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const { photo, name, url } = props;
   return (
-    <Link to={`/detail/${url}`}>
-      <div className="clickable-image mb-4">
-        <img 
+    <>
+      <div className="clickable-image mb-4" onClick={() => {
+        axios
+          .get(`${process.env.REACT_APP_URL_BACKEND}/recipes/${url}`)
+          .then(({ data }) => {
+            dispatch(
+              recipeReducer.setDetail({
+                data: data?.data?.[0],
+                slug: url,
+              })
+            );
+            navigate(`/detail/${url}`);
+          });
+      }}>
+        <img
           src={photo || "./images/home/recipe-1.jpg"}
           height="100%"
           width="100%"
@@ -18,7 +35,7 @@ function RecipeCard(props) {
           {name || "Unknown"}
         </h2>
       </div>
-    </Link>
+    </>
   );
 }
 
