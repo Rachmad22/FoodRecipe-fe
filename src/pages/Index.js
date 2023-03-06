@@ -5,7 +5,7 @@ import Footer from "../components/organisms/Footer";
 import RecipeCard from "../components/molecules/RecipeCard";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import * as recipeReducer from "../store/recipe";
+import * as recipeReducer from "../store/recipe/Index";
 import axios from "axios";
 
 

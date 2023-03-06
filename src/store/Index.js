@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import { configureStore } from "@reduxjs/toolkit";
-import recipeReducer from "./recipe/index";
+import recipeReducer from "./recipe/Index";
 
 const Store = configureStore({
     reducer: {
