@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import React from "react";
 import axios from "axios";
-import * as recipeReducer from "@/store/recipe";
+import * as recipeReducer from "../../store/recipe";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
