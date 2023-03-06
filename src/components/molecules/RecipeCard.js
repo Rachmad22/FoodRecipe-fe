@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from "react";
 import axios from "axios";
 import * as recipeReducer from "../../store/recipe";

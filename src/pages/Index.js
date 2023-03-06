@@ -3,13 +3,19 @@ import "../styles/home.css";
 import Navbar from "../components/organisms/Navbar";
 import Footer from "../components/organisms/Footer";
 import RecipeCard from "../components/molecules/RecipeCard";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import * as recipeReducer from "../store/recipe";
 import axios from "axios";
 
 
 function Home() {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   let [menu, setMenu] = React.useState([]);
   let [isLoading, setIsLoading] = React.useState(true);
+
+  const url =menu?.[0]?.name?.toLocaleLowerCase()?.split(" ").join("_")
 
 
   // GET recipes
@@ -91,9 +97,21 @@ function Home() {
                 Quick + Easy Chicken Bone Broth Ramen- Healthy chicken ramen in a
                 hurry? That’s right!
               </p>
-              <Link to={`/detail/${menu?.[0]?.name?.toLocaleLowerCase()?.split(" ").join("_")} `}>
+              <div onClick={() => {
+                axios
+                  .get(`${process.env.REACT_APP_URL_BACKEND}/recipes/${url}`)
+                  .then(({ data }) => {
+                    dispatch(
+                      recipeReducer.setDetail({
+                        data: data?.data?.[0],
+                        slug: url,
+                      })
+                    );
+                    navigate(`/detail/${url}`);
+                  });
+              }}>
                 <button type="button" className="btn btn-warning">See More</button>
-              </Link>
+              </div>
             </div>
           </div>
         </div>
