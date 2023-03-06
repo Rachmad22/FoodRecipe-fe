@@ -9,7 +9,7 @@ import Add from "./pages/Add";
 import Profile from "./pages/Profile";
 import Maintenance from "./pages/Maintenance";
 
-import store from "./store";
+import store from "./store/index";
 import { Provider } from "react-redux";
 
 // functional component
