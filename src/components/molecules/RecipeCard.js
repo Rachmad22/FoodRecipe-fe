@@ -22,6 +22,7 @@ function RecipeCard(props) {
               })
             );
             navigate(`/detail/${url}`);
+            window.scrollTo(0,0)
           });
       }}>
         <img

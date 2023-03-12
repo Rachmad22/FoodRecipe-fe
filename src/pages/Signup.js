@@ -16,6 +16,16 @@ function Signup() {
   const [errMsg, setErrMsg] = React.useState("");
   const [okeMsg, setOkeMsg] = React.useState("");
 
+    // CHECK IS ALREADY LOGIN
+    React.useEffect(() => {
+      const isLogin = localStorage.getItem("isSignIn");
+      const token = localStorage.getItem("token");
+  
+      if (isLogin && token) {
+        navigate("/");
+      }
+    }, []);
+
   // console.log(okeMsg)
   // console.log(errMsg[0])
 
@@ -34,8 +44,8 @@ function Signup() {
       })
       .catch((err) => {
         setIsError(true)
-        // console.log(err?.response?.data?.message)
-        setErrMsg(err?.response?.data?.message ?? err?.response?.data?.message?.name?.message ?? err?.response?.data?.message?.email?.message ?? err?.response?.data?.message?.phone?.message ?? err?.response?.data?.message?.password?.message ?? "Something wrong with our server")
+        // console.log( err?.response?.data?.message?.name?.message ?? err?.response?.data?.message?.email?.message ?? err?.response?.data?.message?.phone?.message ?? err?.response?.data?.message?.password?.message ?? "Something wrong with our server")
+        setErrMsg( err?.response?.data?.message?.name?.message ?? err?.response?.data?.message?.email?.message ?? err?.response?.data?.message?.phone?.message ?? err?.response?.data?.message?.password?.message ?? "Something wrong with our server")
       })
   }
 
@@ -118,9 +128,9 @@ function Signup() {
                     </label>
                   </div>
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-warning btn-lg regis" onClick={handleSignup}>Register Account</button>
+                    <button type="submit" class="btn btn-warning btn-lg" onClick={handleSignup}>Register Account</button>
                   </div>
-                  <p class="already-have-account">Already have account? <Link to="/login" class="login">
+                  <p class="already-have-account text-black">Already have account? <Link to="/login" class="login">
                     Log In Here
                   </Link>
                   </p>
