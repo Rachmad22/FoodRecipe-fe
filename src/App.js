@@ -8,6 +8,7 @@ import Detail from "./pages/Detail";
 import Add from "./pages/Add";
 import Profile from "./pages/Profile";
 import Maintenance from "./pages/Maintenance";
+import Logout from "./pages/Logout";
 
 import store from "./store/Index";
 import { Provider } from "react-redux";
@@ -48,6 +49,10 @@ function App() {
     {
       path: "profile",
       element: <Profile />
+    },
+    {
+      path: "logout",
+      element: <Logout />
     }
   ])
 
