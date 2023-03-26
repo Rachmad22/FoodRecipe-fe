@@ -3,10 +3,23 @@ import Navbar from "../components/organisms/Navbar";
 import Footer from "../components/organisms/Footer";
 import "../styles/profile.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 // single page application
 
 function Profile() {
+  const navigate = useNavigate();
+
+ // check if already login
+ React.useEffect(() => {
+  const isLogin = localStorage.getItem("isSignIn");
+  const token = localStorage.getItem("token");
+
+  if (!isLogin && !token) {
+   navigate("/login"); // navigate to home
+  }
+ }, []);
 
  const [profile, setProfile] = React.useState([])
  React.useEffect(() => {
