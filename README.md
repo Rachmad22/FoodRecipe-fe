@@ -10,7 +10,7 @@ Mama Recipe is a website-based application that contains a collection of recipes
 
 ## 🔖Build With
 
-- [Next Js](https://nextjs.org)
+- React Js
 - [Axios](https://www.npmjs.com/package/axios)
 - [Bootstrap](https://www.npmjs.com/package/bootstrap)
 
@@ -33,17 +33,14 @@ npm install
 ## Screenshot
 
 | Login Page |
-| ------------- | ------------- |
-| ![Login](https://user-images.githubusercontent.com/116181515/230849330-81485ea0-4a38-4625-b3fd-599aeec3d099.jpg) | 
+| ![Login](https://user-images.githubusercontent.com/116181515/230849330-81485ea0-4a38-4625-b3fd-599aeec3d099.jpg) 
 
 | Home Page  |
-| ------------- | ------------- |
-| ![Landing](https://user-images.githubusercontent.com/116181515/230849602-99c08775-5571-4fb0-81d4-3ff534b7d197.jpg) |
+| ![Landing](https://user-images.githubusercontent.com/116181515/230849602-99c08775-5571-4fb0-81d4-3ff534b7d197.jpg) 
 
 
 | Add Recipe Page |
-| ------------- | ------------- |
-| ![Add Recipe](https://user-images.githubusercontent.com/116181515/230850006-b53ca506-d0ad-4fca-ae8c-d15baa252a4b.jpg) |
+| ![Add Recipe](https://user-images.githubusercontent.com/116181515/230850006-b53ca506-d0ad-4fca-ae8c-d15baa252a4b.jpg) 
 
 
 ## ✍️ Authors
